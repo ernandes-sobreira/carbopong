@@ -11,25 +11,25 @@ body{background:#f0f7ee;display:flex;flex-direction:column;align-items:center;fo
 #scr-start{position:fixed;inset:0;background:linear-gradient(160deg,#e8f5e9,#f7f4ee);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;z-index:99;}
 #scr-start h1{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:#1a1a2e;letter-spacing:-2px;margin-bottom:2px;}
 #scr-start h1 span{color:#27ae60;}
-.sub{font-size:0.78rem;color:#666;margin-bottom:12px;}
+.sub{font-size:0.9rem;color:#666;margin-bottom:12px;}
 .card{width:100%;max-width:310px;background:white;border-radius:14px;border:1.5px solid #d5e8d0;padding:11px 15px;margin-bottom:12px;display:flex;flex-direction:column;gap:7px;}
 .row{display:flex;align-items:center;gap:9px;}
 .badge{width:60px;height:21px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;font-size:0.55rem;color:white;flex-shrink:0;}
-.desc{font-size:0.7rem;color:#444;line-height:1.3;}
+.desc{font-size:0.82rem;color:#444;line-height:1.3;}
 .desc b{color:#1a1a2e;}
 .sbtn{width:100%;max-width:310px;padding:13px;border:none;border-radius:12px;font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:800;cursor:pointer;touch-action:manipulation;margin-top:4px;}
 #scr-game{display:none;flex-direction:column;align-items:center;width:100%;padding:3px 0;}
-#hud{display:flex;width:100%;max-width:480px;background:white;border-radius:10px;border:1.5px solid #d5e8d0;margin-bottom:3px;}
+#hud{display:flex;width:100%;max-width:560px;background:white;border-radius:10px;border:1.5px solid #d5e8d0;margin-bottom:3px;}
 .hi{flex:1;text-align:center;padding:4px 1px;border-right:1px solid #eef5ec;cursor:default;}
 .hi:last-child{border-right:none;}
-.hl{color:#bbb;font-size:0.43rem;letter-spacing:1.5px;text-transform:uppercase;}
-.hv{font-weight:700;color:#1a1a2e;font-size:0.85rem;font-family:'Syne',sans-serif;}
-#wrap{position:relative;width:100%;max-width:480px;}
+.hl{color:#94a3b8;font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;}
+.hv{font-weight:700;color:#1a1a2e;font-size:1rem;font-family:'Syne',sans-serif;}
+#wrap{position:relative;width:100%;max-width:560px;}
 canvas{display:block;width:100%;border-radius:12px;border:2px solid #d5e8d0;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
-#fact{margin-top:3px;padding:4px 10px;background:white;border-radius:8px;border:1.5px solid #d5e8d0;font-size:0.58rem;color:#555;text-align:center;width:100%;max-width:480px;min-height:24px;line-height:1.5;}
+#fact{margin-top:3px;padding:4px 10px;background:white;border-radius:8px;border:1.5px solid #d5e8d0;font-size:0.82rem;color:#555;text-align:center;width:100%;max-width:560px;min-height:34px;line-height:1.5;}
 .ov{position:absolute;inset:0;background:rgba(240,247,238,0.97);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;z-index:10;padding:18px;text-align:center;}
 .ov h2{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#1a1a2e;}
-.ov p{font-size:0.68rem;color:#555;line-height:1.7;max-width:280px;}
+.ov p{font-size:0.9rem;color:#555;line-height:1.7;max-width:280px;}
 .obtn{padding:10px 24px;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:800;cursor:pointer;touch-action:manipulation;background:#1a1a2e;color:white;}
 .obtn:active{background:#27ae60;}
 .gp{position:absolute;pointer-events:none;font-family:'Syne',sans-serif;font-weight:700;font-size:0.65rem;padding:3px 7px;border-radius:14px;color:white;animation:fu 1.3s ease-out forwards;white-space:nowrap;z-index:20;}
@@ -40,11 +40,12 @@ canvas{display:block;width:100%;border-radius:12px;border:2px solid #d5e8d0;box-
 <body>
 
 <div id="scr-start">
+  <a href="https://ernandes-sobreira.github.io/jogos-ambientais/" style="position:absolute;top:14px;left:14px;color:#1e7a46;text-decoration:none;font-weight:700;font-size:.9rem;border:1.5px solid #d5e8d0;border-radius:20px;padding:6px 12px;background:#fff">‹ Todos os jogos</a>
   <div style="font-size:2.5rem;margin-bottom:4px">🌳</div>
   <h1>Carbo<span>Pong</span></h1>
   <div class="sub">Ciclo biogeoquímico do carbono</div>
   <div class="card">
-    <div class="row"><div class="badge" style="background:#27ae60">🌿 C-org</div><div class="desc"><b>+1 vida</b> + chuva de O₂</div></div>
+    <div class="row"><div class="badge" style="background:#27ae60">🌿 C-org</div><div class="desc"><b>+1 vida</b> (até 3) + chuva de O₂</div></div>
     <div class="row"><div class="badge" style="background:#e67e22">🔥 CH₄</div><div class="desc"><b>Bola pega fogo</b> — acelera 3s</div></div>
     <div class="row"><div class="badge" style="background:#e74c3c">☁️ CO₂</div><div class="desc"><b>Bola acelera</b> — emissão</div></div>
     <div class="row"><div class="badge" style="background:#8e44ad">🪨 CaCO₃</div><div class="desc"><b>Congela + quadrinhos</b> científicos</div></div>
@@ -54,6 +55,7 @@ canvas{display:block;width:100%;border-radius:12px;border:2px solid #d5e8d0;box-
     style="width:100%;max-width:310px;padding:10px 13px;border-radius:10px;border:1.5px solid #d5e8d0;font-family:'DM Sans',sans-serif;font-size:0.88rem;outline:none;color:#1a1a2e;background:white;margin-bottom:8px;">
   <button class="sbtn" id="btn-go" style="background:#1a1a2e;color:white;">▶ INICIAR</button>
   <button class="sbtn" onclick="showRanking()" style="background:transparent;color:#27ae60;border:1.5px solid #27ae60;margin-top:0;">🏆 Ranking</button>
+  <p style="font-size:.78rem;color:#64748b;margin-top:12px;text-align:center;max-width:310px">Meta: quebre todos os blocos de cada fase. Perder a bola tira uma vida e 50 pontos.<br><b style="color:#1a1a2e">Idealizado por Ernandes Sobreira</b></p>
 </div>
 
 <div id="scr-game">
@@ -91,11 +93,10 @@ canvas{display:block;width:100%;border-radius:12px;border:2px solid #d5e8d0;box-
   <div style="font-size:2rem;margin-bottom:6px">🏆</div>
   <h2 style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:#1a1a2e;margin-bottom:12px;">Ranking</h2>
   <div id="rank-list" style="width:100%;max-width:310px;background:white;border-radius:14px;border:1.5px solid #d5e8d0;overflow:hidden;margin-bottom:14px;"></div>
+  <p id="rank-note" style="font-size:.78rem;color:#64748b;margin:-6px 0 12px;text-align:center;max-width:310px"></p>
   <div style="display:flex;gap:8px;">
     <button onclick="document.getElementById('scr-rank').style.display='none';document.getElementById('scr-start').style.display='flex';"
       style="padding:10px 20px;background:#1a1a2e;color:white;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:800;cursor:pointer;">← Voltar</button>
-    <button onclick="clearRanking()"
-      style="padding:10px 20px;background:#e74c3c;color:white;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:800;cursor:pointer;">Limpar</button>
   </div>
 </div>
 
@@ -130,20 +131,20 @@ const TYPES=[
 // LEVELS
 // ═══════════════════════════════════════════
 const LEVELS=[
-  {name:'Atmosfera',icon:'☁️',cols:6,rows:3,bgTop:'#f8fff6',bgBot:'#ffffff',
+  {name:'Atmosfera',desc:'O CO₂ do ar é a porta de entrada do carbono na vida.',icon:'☁️',cols:6,rows:3,bgTop:'#f8fff6',bgBot:'#ffffff',
    weather:'sunny'},
-  {name:'Floresta', icon:'🌿',cols:6,rows:4,bgTop:'#e8f5e9',bgBot:'#f0fff0',
+  {name:'Floresta',desc:'Plantas fixam carbono pela fotossíntese.', icon:'🌿',cols:6,rows:4,bgTop:'#e8f5e9',bgBot:'#f0fff0',
    weather:'sunny',typeOv:(c,r)=>r<=1?0:null},
-  {name:'Emissão',  icon:'🔥',cols:7,rows:4,bgTop:'#fff3e0',bgBot:'#fff8ee',
+  {name:'Emissão',desc:'Queima e decomposição sem oxigênio liberam CO₂ e CH₄.',  icon:'🔥',cols:7,rows:4,bgTop:'#fff3e0',bgBot:'#fff8ee',
    weather:'hot',typeOv:(c,r)=>(c+r)%2===0?1:2},
-  {name:'Sedimentos',icon:'🪨',cols:7,rows:5,bgTop:'#f3e5f5',bgBot:'#fdf5ff',
+  {name:'Sedimentos',desc:'Rochas e sedimentos guardam carbono por milhões de anos.',icon:'🪨',cols:7,rows:5,bgTop:'#f3e5f5',bgBot:'#fdf5ff',
    weather:'wind',typeOv:(c,r)=>c>=2&&c<=4&&r>=1&&r<=3?3:null,
    hpOv:(c,r)=>c>=2&&c<=4&&r>=1&&r<=3?2:1},
-  {name:'Oceano',   icon:'🌊',cols:8,rows:5,bgTop:'#e3f2fd',bgBot:'#f0f8ff',
+  {name:'Oceano',desc:'A água dissolve CO₂ e forma bicarbonato.',   icon:'🌊',cols:8,rows:5,bgTop:'#e3f2fd',bgBot:'#f0f8ff',
    weather:'rain',typeOv:(c,r)=>r<=1?4:null,hpOv:(c,r)=>r<=1?2:1},
-  {name:'Tempestade',icon:'⛈️',cols:8,rows:6,bgTop:'#ede7f6',bgBot:'#f3eeff',
+  {name:'Tempestade',desc:'Eventos extremos aceleram as trocas de carbono.',icon:'⛈️',cols:8,rows:6,bgTop:'#ede7f6',bgBot:'#f3eeff',
    weather:'storm',typeOv:(c,r)=>r%2===0?2:1,hpOv:(c,r)=>r%2===0?2:1},
-  {name:'Crise',    icon:'🌡️',cols:8,rows:7,bgTop:'#fce4ec',bgBot:'#fff0f3',
+  {name:'Crise',desc:'Tudo junto: o ciclo fora de equilíbrio.',    icon:'🌡️',cols:8,rows:7,bgTop:'#fce4ec',bgBot:'#fff0f3',
    weather:'storm',typeOv:(c,r)=>(c+r*2)%5,hpOv:(c,r)=>(c+r)%2===0?2:1},
 ];
 function getCfg(){
@@ -177,19 +178,19 @@ let comics=[];
 const COMIC_FACTS=[
   'O carbono existe há 13 bi de anos!','CaCO₃ = 60 Mi Gt de C','Pedras guardam C por eons',
   'Intemperismo libera CO₂','Vulcões emitem C geológico','Oceanos: 38.000 Gt de C dissolvido',
-  'Solo guarda 2× mais C que a atm.','Permafrost: 1.500 Gt de C','Carvão = C de 300 Ma atrás',
+  'Solo guarda mais C que a atmosfera','Permafrost: 1.500 Gt de C','Carvão = C de 300 Ma atrás',
   'Carbono = base da vida','C circula entre terra, ar e água','Fotossíntese: 120 Gt C/ano',
 ];
 
 // Bubble facts (float up every 8s)
 let bubbles=[],bubbleTimer=0;
 const BUBBLE_FACTS=[
-  {c:'#27ae60',t:'Florestas tropicais absorvem ~2.6 Gt CO₂/ano'},
-  {c:'#e67e22',t:'Pantanal emite ~2 Tg CH₄/ano'},
+  {c:'#27ae60',t:'Florestas guardam carbono na madeira, nas folhas e no solo'},
+  {c:'#e67e22',t:'Áreas úmidas como o Pantanal são a maior fonte natural de CH₄'},
   {c:'#e74c3c',t:'CO₂ atmosférico: ~420 ppm em 2024'},
   {c:'#8e44ad',t:'Rochas carbonáticas: maior reservatório de C'},
   {c:'#2980b9',t:'Oceanos absorvem 31% das emissões humanas'},
-  {c:'#27ae60',t:'Cerrado: até 100 t C/ha no solo'},
+  {c:'#27ae60',t:'O Cerrado guarda muito carbono nas raízes e no solo'},
   {c:'#e67e22',t:'CH₄ dura ~12 anos; CO₂ pode durar séculos'},
   {c:'#2980b9',t:'pH oceânico caiu de 8.2 → 8.1 desde 1900'},
   {c:'#e74c3c',t:'Queima fóssil: ~37 Gt CO₂/ano'},
@@ -266,7 +267,7 @@ function popup(x,y,txt,col){
 // ═══════════════════════════════════════════
 function applyFX(type,bx,by){
   if(type.ef==='life'){
-    lives=Math.min(6,lives+1);popup(bx,by,'🌿 +1 VIDA','#27ae60');
+    if(lives<3){lives++;popup(bx,by,'🌿 +1 VIDA','#27ae60');}else{score+=30;popup(bx,by,'🌿 +30 pts','#27ae60');}
     o2Timer=180;for(let i=0;i<20;i++)spawnO2();
   }
   else if(type.ef==='fire'){
@@ -525,12 +526,12 @@ function drawComics(){
     const a=c.life<30?c.life/30:c.life>140?(160-c.life)/20:1;
     CTX.globalAlpha=a;
     const mw=130,pad=6;
-    CTX.font='bold 8px DM Sans';CTX.textAlign='left';
+    CTX.font='bold 9.5px DM Sans, sans-serif';CTX.textAlign='left';
     // wrap text
     const words=c.text.split(' '),lines=[];let cur='';
     words.forEach(w=>{const t=cur?cur+' '+w:w;if(CTX.measureText(t).width>mw-pad*2){if(cur)lines.push(cur);cur=w;}else cur=t;});
     if(cur)lines.push(cur);
-    const lh=11,bh=lines.length*lh+pad*2,bw=mw;
+    const lh=12,bh=lines.length*lh+pad*2,bw=mw;
     const bx=Math.max(4,Math.min(W-bw-4,c.x-bw/2)),by=c.y-bh;
     CTX.fillStyle='white';CTX.strokeStyle=c.col;CTX.lineWidth=2;
     CTX.shadowColor='rgba(0,0,0,0.1)';CTX.shadowBlur=6;
@@ -539,7 +540,7 @@ function drawComics(){
     // tail
     CTX.beginPath();CTX.moveTo(c.x-5,by+bh);CTX.lineTo(c.x,by+bh+9);CTX.lineTo(c.x+5,by+bh);
     CTX.fillStyle='white';CTX.fill();CTX.stroke();
-    CTX.fillStyle='#1a1a2e';CTX.font='bold 8px DM Sans';
+    CTX.fillStyle='#1a1a2e';CTX.font='bold 9.5px DM Sans, sans-serif';
     lines.forEach((l,i)=>CTX.fillText(l,bx+pad,by+pad+8+i*lh));
   });CTX.restore();
 }
@@ -550,11 +551,11 @@ function drawBubbles(){
   bubbles.forEach(b=>{
     const a=b.life<40?b.life/40:b.life>220?(240-b.life)/20:1;
     CTX.globalAlpha=a;
-    const mw=150,pad=7;CTX.font='bold 8.5px DM Sans';CTX.textAlign='left';
+    const mw=170,pad=7;CTX.font='bold 10px DM Sans, sans-serif';CTX.textAlign='left';
     const words=b.text.split(' '),lines=[];let cur='';
     words.forEach(w=>{const t=cur?cur+' '+w:w;if(CTX.measureText(t).width>mw-pad*2){if(cur)lines.push(cur);cur=w;}else cur=t;});
     if(cur)lines.push(cur);
-    const lh=12,bh=lines.length*lh+pad*2,bw=mw;
+    const lh=13,bh=lines.length*lh+pad*2,bw=mw;
     const bx=Math.max(4,Math.min(W-bw-4,b.x-bw/2)),by=b.y-bh;
     CTX.fillStyle='white';CTX.strokeStyle=b.color;CTX.lineWidth=1.8;
     CTX.shadowColor='rgba(0,0,0,0.1)';CTX.shadowBlur=7;
@@ -595,7 +596,7 @@ function drawBall(b,main){
     CTX.restore();
   }
   CTX.fillStyle=col;CTX.beginPath();CTX.arc(b.x,b.y,BALL_R,0,Math.PI*2);CTX.fill();
-  CTX.fillStyle='white';CTX.font='bold 6px DM Sans';CTX.textAlign='center';CTX.textBaseline='middle';
+  CTX.fillStyle='white';CTX.font='bold 8px DM Sans, sans-serif';CTX.textAlign='center';CTX.textBaseline='middle';
   CTX.fillText(lbl,b.x,b.y);
 }
 
@@ -624,7 +625,7 @@ function draw(){
     const ox=bl.sh>0?(Math.random()-0.5)*3:0;if(bl.sh>0)bl.sh--;
     CTX.beginPath();CTX.roundRect(bl.x+ox,bl.y,bl.w,bl.h,4);
     CTX.fillStyle=bl.t.bg;CTX.fill();CTX.strokeStyle=bl.t.c;CTX.lineWidth=1.5;CTX.stroke();
-    CTX.fillStyle=bl.t.c;CTX.font='bold 7.5px DM Sans';CTX.textAlign='center';CTX.textBaseline='middle';
+    CTX.fillStyle=bl.t.c;CTX.font='bold 9px DM Sans, sans-serif';CTX.textAlign='center';CTX.textBaseline='middle';
     CTX.fillText(bl.t.e+' '+bl.t.l,bl.x+ox+bl.w/2,bl.y+bl.h/2);
     if(bl.maxHp>1){CTX.fillStyle=bl.hp<bl.maxHp?'#e74c3c88':bl.t.c+'44';CTX.fillRect(bl.x+ox,bl.y+bl.h-4,bl.w*bl.hp/bl.maxHp,4);}
   });
@@ -676,7 +677,7 @@ function loop(){
   // Main ball
   if(ball&&!ballFrozen){
     if(moveB(ball)){
-      lives--;hud();
+      lives--;score=Math.max(0,score-50);popup(W/2,H-60,'−50 pts','#e74c3c');hud();
       if(lives<=0){gameOver();return;}
       extras=[];ball=spawnBall(false);
     }
@@ -755,13 +756,25 @@ function quitToMenu(){
 // ═══════════════════════════════════════════
 // RANKING
 // ═══════════════════════════════════════════
+const escH=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+const GAME_ID='carbopong';
+const firebaseConfig={apiKey:"AIzaSyCbXi3UCVl8oLleBzGb6DqWSxbZmZU2yDQ",authDomain:"jogos-ranking.firebaseapp.com",projectId:"jogos-ranking",
+  storageBucket:"jogos-ranking.firebasestorage.app",messagingSenderId:"958784915420",appId:"1:958784915420:web:4212d3ad278f02d600f119"};
+let db=null,fsF=null;
+(async()=>{try{const a=await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");const f=await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
+  db=f.getFirestore(a.initializeApp(firebaseConfig));fsF=f;}catch(e){}})();
+async function loadGlobal(){if(!db)return null;try{const q=fsF.query(fsF.collection(db,'games',GAME_ID,'scores'),fsF.orderBy('score','desc'),fsF.limit(10));
+  const sn=await fsF.getDocs(q);const r=[];sn.forEach(d=>{const x=d.data();r.push({name:x.name,pts:x.score,lvl:x.fase});});return r;}catch(e){return null;}}
 function getRank(){try{return JSON.parse(localStorage.getItem('carbopong_rank')||'[]');}catch(e){return[];}}
 function saveRanking(name,pts,lvl){
   const l=getRank();l.push({name,pts,lvl,date:new Date().toLocaleDateString('pt-BR')});
   l.sort((a,b)=>b.pts-a.pts);try{localStorage.setItem('carbopong_rank',JSON.stringify(l.slice(0,10)));}catch(e){}
+  if(db&&pts>0)fsF.addDoc(fsF.collection(db,'games',GAME_ID,'scores'),{name:String(name).slice(0,20),score:pts,fase:lvl,level:'Fase '+lvl,ts:fsF.serverTimestamp()}).catch(()=>{});
 }
-function showRanking(){
-  const l=getRank(),el=document.getElementById('rank-list');
+async function showRanking(){
+  const g=await loadGlobal();
+  const l=g||getRank(),el=document.getElementById('rank-list');
+  document.getElementById('rank-note').textContent=g?'Ranking global: maior pontuação primeiro.':'Sem conexão com o ranking global. Mostrando as partidas deste aparelho.';
   el.innerHTML=l.length===0
     ?'<div style="padding:18px;text-align:center;color:#aaa;font-size:0.72rem;">Nenhuma partida ainda.</div>'
     :l.map((r,i)=>{
@@ -769,7 +782,7 @@ function showRanking(){
       const bg=i===0?'#fffbe6':i===1?'#f5f5f5':i===2?'#fff3ec':'white';
       return '<div style="display:flex;align-items:center;gap:9px;padding:8px 13px;background:'+bg+';border-bottom:1px solid #f0f0f0;">'
         +'<span style="width:24px;text-align:center;font-size:0.9rem">'+m+'</span>'
-        +'<span style="flex:1;font-weight:700;font-size:0.78rem;color:#1a1a2e">'+r.name+'</span>'
+        +'<span style="flex:1;font-weight:700;font-size:0.85rem;color:#1a1a2e">'+escH(r.name)+'</span>'
         +'<span style="font-size:0.72rem;color:#27ae60;font-weight:700">'+r.pts+' pts</span>'
         +'<span style="font-size:0.62rem;color:#aaa;margin-left:3px">F'+r.lvl+'</span>'
         +'</div>';}).join('');
@@ -788,7 +801,7 @@ document.addEventListener('mousemove',e=>{if(running)setTX(e.clientX);});
 function onT(e){e.preventDefault();if(running)setTX(e.touches[0].clientX);}
 CV.addEventListener('touchmove',onT,{passive:false});
 CV.addEventListener('touchstart',onT,{passive:false});
-document.addEventListener('touchmove',onT,{passive:false});
+document.addEventListener('touchmove',e=>{if(running)onT(e);},{passive:false});
 const keys={};
 document.addEventListener('keydown',e=>{keys[e.key]=true;if(e.key==='Escape')paused?resumeGame():pauseGame();});
 document.addEventListener('keyup',e=>keys[e.key]=false);
